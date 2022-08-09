@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>登录界面</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&amp;subset=chinese-simplified" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./iconfont/iconfont.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <!-- https://fontawesome.com/v5/search?s=solid%2Cbrands -->
+
+    <!-- START - jQuery Reference -->
+    <script type="text/javascript" language="Javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript" src="/script/jQuery.js"></script> -->
+    <script type='text/javascript'>
+        //<![CDATA[
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src = '/script/jQuery-v3.6.0.js' type = 'text/javascript' % 3E % 3 C / script % 3E "));
+        } //]]>
+    </script>
+    <!-- END - jQuery Reference -->
+
+
+</head>
+
+<body>
+
+    <!-- 顶部 -->
+    <div class="up_box">
+        <div class="caption">
+            <img src="./images/b7c169f216321c4b732585522dfab0e.png" alt="LOGO" width="60" height="50">
+            <span>WIHP</span>
+        </div>
+        <div class="other_button">
+            <i class="fas fa-envelope" id="news"></i>
+            <i class="fas fa-circle" id="badge"></i>
+            <i class="fas fa-home" id="home"></i>
+            <i class="fas fa-user-circle" id="personalBtn"></i>
+        </div>
+        <!-- 提示窗口 -->
+        <div class="message">
+            <p>您有一条打卡异常信息未处理</p>
+            <p><button class="getDeal">前往处理</button></p>
+        </div>
+        <!-- 个人信息 -->
+        <div class="personal">
+            <i class="fas fa-user"></i>
+            <span>李三</span>
+            <p><button class="log-out">退出登录</button></p>
+        </div>
+
+    </div>
+
+
+    <main>
+        <!-- 导航栏 -->
+        <aside>
+
+            <div class="nav-list">
+                <div class="item">
+                    <div class="parentNav">
+                        <i class="fab fa-searchengin"></i>
+                        <span>人员管理</span>
+                    </div>
+                    <ul class="childNav">
+                        <li>
+                            <span>工作信息</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="parentNav">
+                        <i class="fas fa-user"></i>
+                        <span>个人信息</span>
+                    </div>
+                    <ul class="childNav">
+                        <li>
+                            <span>信息编辑</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- 主页面 -->
+
+        <!-- 起始界面 -->
+        <div class="main-text">
+            <div class="text">
+                <h2>欢迎您的使用,李三</h2>
+                <img src="./images/微信图片_20220806210109.jpg">
+            </div>
+        </div>
+        <!-- 工作信息界面 -->
+        <div class="work-text">
+            <div class="detailPage">
+                <img src="./images/1.jpg" /><strong>李四</strong>
+                <dl>
+                    <dt>
+                        <strong>工作编号</strong>&nbsp;&nbsp;&nbsp;&nbsp;<sapn class="num">1001</sapn>
+                    </dt>
+                    <dt>
+                        <strong>员工部门</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="depart">公关部</span>
+                    </dt>
+                    <dt>
+                        <strong>打卡时间</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="time">2022/07/28</span>
+                    </dt>
+                    <dt>
+                        <strong>打卡状态</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="status">正常</span>
+                    </dt>
+                    <dt>
+                        <strong>异常原因</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="reason">无</span>
+                    </dt>
+                </dl>
+                <input type="submit" value="打印报告" class="detail-print"><input type="submit" value="返回" class="detail-return">
+            </div>
+            <div class="search">
+                <form action="">
+                    <span>员工部门:</span>
+                    <select name="员工部门">
+                        <option selected="selected" disabled="disabled"  style='display: none'></option>
+                        <option>公关部</option>
+                        <option>人事部</option>
+                        <option>维修部</option>
+                        <option>市场部</option>
+                    </select>
+                    <span>打卡时间:</span>
+                    <input type="datetime-local">
+                    <span>打卡状态:</span>
+                    <select name="打卡状态">
+                        <option selected="selected" disabled="disabled"  style='display: none'></option>
+                        <option>正常</option><option>异常</option>
+                    </select>
+                    <input type="button" class="find" value="搜索"><i class="fas fa-search"></i>
+                </form>
+
+            </div>
+            <div class="mange" id="mange-1th">
+                <table width="100%" height="100%">
+                    <tr>
+                        <td></td>
+                        <td>打卡时间</td>
+                        <td>员工部门</td>
+                        <td>员工编号</td>
+                        <td>打卡状态</td>
+                        <td>
+                            <input type="button" class="delete" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="6"> 本日</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1002</td>
+                        <td style="color:red">异常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>人事部</td>
+                        <td>1003</td>
+                        <td style="color:red">异常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>维修部</td>
+                        <td>1004</td>
+                        <td style="color:red">异常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>市场部</td>
+                        <td>1005</td>
+                        <td style="color:red">异常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="mange" id="mange-2th">
+                <table width="100%" height="100%">
+                    <tr>
+                        <td></td>
+                        <td>打卡时间</td>
+                        <td>员工部门</td>
+                        <td>员工编号</td>
+                        <td>打卡状态</td>
+                        <td>
+                            <input type="button" class="delete" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="6"></th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1002</td>
+                        <td style="color:red">异常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1003</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1004</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>人事部</td>
+                        <td>1005</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1007</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/29</td>
+                        <td>公关部</td>
+                        <td>1011</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/28</td>
+                        <td>公关部</td>
+                        <td>1001</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/28</td>
+                        <td>维修部</td>
+                        <td>1003</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/28</td>
+                        <td>公关部</td>
+                        <td>1021</td>
+                        <td style="color:#009900">正常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="circle-checkbox" /></td>
+                        <td>2022/6/28</td>
+                        <td>市场部</td>
+                        <td>1013</td>
+                        <td style="color:red">异常</td>
+                        <td>
+                            <input type="button" class="detail" value="详情">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="page">
+                <ul>
+                    <i class="fas fa-angle-left"></i>
+                    <span class="page-current">1</span>
+                    <span>2</span>
+                    <span>3</span> ……
+                    <span>8</span>
+                    <span>9</span>
+                    <i class="fas fa-angle-right"></i>
+                </ul>
+            </div>
+        </div>
+        <div class="person-text">
+            <div class="unimproved">
+                <div class="name">
+                    <p>
+                        <i class="fas fa-user"></i><span>李三</span>
+                    </p>
+                </div>
+                <table>
+                    <tr>
+                        <th>工作编号</th>
+                        <th class="work">6666</th>
+                    </tr>
+                    <tr>
+                        <th>工作部门</th>
+                        <th class="work">人事部</th>
+                    </tr>
+                    <tr>
+                        <th>工作地址</th>
+                        <th class="work">东厂3号楼103室</th>
+                    </tr>
+                    <tr>
+                        <th>身份权限</th>
+                        <th class="work">管理员</th>
+                    </tr>
+                    <tr>
+                        <th>通讯方式</th>
+                        <th class="work work-five">无记录</th>
+                    </tr>
+                    <tr>
+                        <th>邮箱Email</th>
+                        <th class="work work-five">无记录</th>
+                    </tr>
+                </table>
+
+                <div class="tip">
+                    <p><span class="iconfont icon-jinggao jinggao"></span>信息未完善！</p>
+                </div>
+                <input class="bth-normal" type="button" value="编辑" />
+            </div>
+            <div class="edit">
+                <div class="name">
+                    <p>
+                        <i class="fas fa-user"></i><span>李三</span>
+                    </p>
+                </div>
+                <table>
+                    <tr>
+                        <th>工作编号</th>
+                        <th class="work"><input type="text" value="6666" /></th>
+                    </tr>
+                    <tr>
+                        <th>工作部门</th>
+                        <th class="work"><select name="" id="">
+                                <option value="人事部">人事部</option>
+                                <option value="公关部">公关部</option>
+                                <option value="维修部">维修部</option>
+                                <option value="市场部">市场部</option>
+                              </select></th>
+                    </tr>
+                    <tr>
+                        <th>工作地址</th>
+                        <th class="work"><input type="text" value="东厂3号楼103室" /></th>
+                    </tr>
+                    <tr>
+                        <th>身份权限</th>
+                        <th class="work"><select name="" id="">
+                                <option value="管理员">管理员</option>
+                                <option value="员工">普通员工</option>
+                              </select></th>
+                    </tr>
+                    <tr>
+                        <th>通讯方式</th>
+                        <th class="work"><input type="text" value="123456XXXXXXXX" /></th>
+                    </tr>
+                    <tr>
+                        <th>邮箱Email</th>
+                        <th class="work"><input type="email" value="123678XXX.qq.com" /></th>
+                    </tr>
+                </table>
+                <input class="bth-normal" type="button" value="保存" />
+            </div>
+            <div class="improved">
+                <div class="name">
+                    <p>
+                        <i class="fas fa-user"></i><span>李三</span>
+                    </p>
+                </div>
+                <table>
+                    <tr>
+                        <th>工作编号</th>
+                        <th class="work">6666</th>
+                    </tr>
+                    <tr>
+                        <th>工作部门</th>
+                        <th class="work">人事部</th>
+                    </tr>
+                    <tr>
+                        <th>工作地址</th>
+                        <th class="work">东厂3号楼103室</th>
+                    </tr>
+                    <tr>
+                        <th>身份权限</th>
+                        <th class="work">管理员</th>
+                    </tr>
+                    <tr>
+                        <th>通讯方式</th>
+                        <th class="work">123456XXXXXXXX</th>
+                    </tr>
+                    <tr>
+                        <th>邮箱Email</th>
+                        <th class="work">123678XXX.qq.com</th>
+                    </tr>
+                </table>
+                <input class="bth-normal" type="button" value="编辑" />
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <!-- <div>
+        <span onclick="clickTabNew(this)"><i class="fab fa-searchengin"></i>人员管理</span>
+        <span onclick="clickTabNew(this)"><i class="fas fa-user"></i>个人信息</span>
+        <span id="botLine"></span>
+    </div> -->
+
+</body>
+<script src="script.js"></script>
+
+
+</html>

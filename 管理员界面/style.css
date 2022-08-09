@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    list-style: none;
+    /* 下划线消失 */
+    text-decoration: none;
+}
+
+
+/* 上边栏 */
+
+.up_box {
+    /* 弹性布局 */
+    display: flex;
+    /* 相对定位 */
+    /* position: relative; */
+    width: 100%;
+    height: 60px;
+    border: 2px solid #949494;
+    background-color: #0000cc;
+}
+
+.up_box .caption img {
+    margin-left: 10px;
+    padding: 3px 3px;
+}
+
+.up_box .caption span {
+    color: #d2d2d2;
+    font-size: 40px;
+    position: absolute;
+    margin-top: 25px;
+    letter-spacing: 10px;
+    line-height: 0;
+}
+
+.up_box .other_button {
+    float: right;
+    margin: auto 10px auto auto;
+    padding: 0%;
+}
+
+.up_box .other_button i {
+    color: #616161;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.up_box .other_button i:hover {
+    color: #616161;
+    cursor: pointer;
+}
+
+#badge {
+    /* display: none; */
+    bottom: 10px;
+    position: relative;
+    left: -30px;
+    color: red;
+    font-size: 2px;
+    margin: 0px -17px 0px 0px;
+    ;
+}
+
+
+/* .up_box .other_button:hover~.message {
+    display: block;
+} */
+
+
+/* 消息提示框 */
+
+.message {
+    display: none;
+    border: 2px solid #949494;
+    background-color: #fff;
+    text-align: right;
+    line-height: 2em;
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 50px;
+    padding: 8px;
+    border-radius: 5%;
+}
+
+.personal {
+    display: none;
+    border: 2px solid #949494;
+    background-color: #fff;
+    text-align: left;
+    line-height: 3em;
+    position: absolute;
+    margin-left: 91%;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5%;
+    width: auto;
+    /* letter-spacing: 6px; */
+}
+
+.message .getDeal {
+    width: auto;
+    border: none;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.message .getDeal:hover {
+    cursor: pointer;
+}
+
+.personal i {
+    color: #707070;
+    font-size: 25px;
+    float: left;
+    margin: 5px 5px;
+}
+
+.personal .log-out {
+    float: right;
+    width: auto;
+    border: none;
+    color: #fff;
+    background-color: #949494;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.personal .log-out:hover {
+    cursor: pointer;
+}
+
+
+/* 导航栏 */
+
+aside {
+    width: 200px;
+    height: 100%;
+    padding-bottom: 0%;
+    /* margin-top: 50px; */
+    background-color: #949494;
+    /* 生成绝对定位的元素 */
+    position: absolute;
+}
+
+aside .nav-list .item {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* 父导航 */
+
+aside .nav-list .parentNav {
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+aside .nav-list .parentNav:hover {
+    background-color: #616161;
+}
+
+aside .nav-list .item:hover .childNav {
+    display: block;
+}
+
+aside .nav-list .parentNav i {
+    font-size: 25px;
+    color: white;
+    /* display: block; //图标换行的原因*/
+}
+
+aside .nav-list .parentNav i:last-child {
+    float: right;
+}
+
+
+/* 子导航 */
+
+aside .nav-list .childNav {
+    /* 默认隐藏 */
+    display: none;
+}
+
+aside .nav-list .active {
+    display: block;
+    border-left: 15px solid #000099;
+}
+
+
+/* item 被激活时显示 */
+
+
+/* aside .nav-list .item.active .childNav {
+    display: block;
+} */
+
+aside .nav-list .childNav span {
+    color: black;
+    background-color: #bcbcbc;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 30px;
+    padding: 10px 50px;
+}
+
+aside .nav-list .childNav:hover {
+    border-left: 15px solid #000099;
+}
+
+
+/* 主内容 */
+
+
+/* 主页 */
+
+.main-text {
+    width: 100%;
+    /* margin-top: 50px; */
+    margin-left: 200px;
+    line-height: 200px;
+    /* text-align: center; */
+    /* display: none; */
+}
+
+.main-text h2 {
+    /* margin-top: 2%; */
+    margin-left: 10%;
+}
+
+.main-text img {
+    width: 70%;
+    height: 60%;
+    text-align: center;
+    float: left;
+    position: absolute;
+    /* line-height: 18; */
+    margin-left: 150px;
+    margin-top: 0%;
+    /* background-image: url(../images/微信图片_20220806210109.jpg);
+    background-position: center;
+    background-size: 800px 400px;
+    background-repeat: no-repeat; */
+}
+
+
+/* 工作信息 */
+
+.work-text {
+    /* width: 100%; */
+    /* margin-top: 50px; */
+    margin-left: 200px;
+    text-align: center;
+    /* position: absolute; */
+    display: none;
+}
+
+
+/* 检索栏 */
+
+.work-text .search {
+    padding-bottom: 10px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+    /* 字间距 */
+    letter-spacing: 5px;
+}
+
+.work-text .search i {
+    padding: 5px;
+}
+
+
+/* 信息表格 */
+
+.work-text table {
+    border-collapse: collapse;
+    /* position: auto; */
+}
+
+.work-text .mange table tr {
+    border-bottom: 1px solid #999999;
+    height: 40px;
+}
+
+.work-text .mange table tr:nth-child(1) {
+    background-color: #999999;
+    border-color: #999999;
+    height: 35px;
+}
+
+.work-text .mange table tr:nth-child(2) {
+    background-color: #d7d7d7;
+    border-color: #d7d7d7;
+    /* text-align: left; */
+    letter-spacing: 2px;
+    height: 35px;
+}
+
+.work-text .mange table tr:nth-child(2) th {
+    padding-right: 90%;
+}
+
+
+/* .work-text #mange-1th {
+    display: none;
+} */
+
+.work-text #mange-2th {
+    display: none;
+}
+
+
+/* 个人信息编辑 */
+
+.person-text {
+    display: none;
+}
+
+
+/* .person-text .unimproved {
+    display: none;
+} */
+
+.person-text .edit {
+    display: none;
+}
+
+.person-text .improved {
+    display: none;
+}
+
+
+/* 姓名栏设置 */
+
+.person-text .unimproved .name,
+.person-text .edit .name,
+.person-text .improved .name {
+    text-align: left;
+    margin-left: 30%;
+    letter-spacing: 5px;
+    font-weight: 600;
+    padding: 20px 20px;
+    line-height: 150px;
+}
+
+.person-text .unimproved .name i,
+.person-text .edit .name i,
+.person-text .improved .name i {
+    /* margin:  */
+    color: #707070;
+    font-size: 50px;
+    margin-right: 50px;
+}
+
+.person-text .unimproved .name p,
+.person-text .edit .name p,
+.person-text .improved .name p {
+    font-size: 25px;
+}
+
+
+/* 通用表格设置 */
+
+.person-text .unimproved table,
+.person-text .edit table,
+.person-text .improved table {
+    text-align: left;
+    font-size: 25px;
+    margin-left: 29%;
+    padding: 16px 20px;
+    line-height: 1.8;
+}
+
+.person-text .unimproved .work,
+.person-text .edit .work,
+.person-text .improved .work {
+    font-weight: 500;
+    color: #666;
+    padding: 0 6em;
+}
+
+.person-text .edit input,
+.person-text .edit select {
+    width: 360px;
+    font-size: 26px;
+    height: 30px;
+    /* margin: 0 100px; */
+}
+
+.person-text .unimproved .work-five {
+    color: red;
+}
+
+.person-text .unimproved .tip {
+    text-align: center;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+.person-text .unimproved .tip p {
+    font-size: 30px;
+    color: red;
+    margin: -45px 0 0 290px;
+}
+
+.person-text .unimproved .tip span {
+    font-size: 40px;
+}
+
+
+/* 按钮设置 */
+
+.person-text .unimproved .bth-normal,
+.person-text .edit .bth-normal,
+.person-text .improved .bth-normal {
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    margin: 30px 0px 30px 70%;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    background-color: #CCC;
+}
+
+.bth-normal :hover {
+    cursor: pointer;
+}
+
+
+/* 原型复选框 */
+
+
+/* 设置选中背景 */
+
+.circle-checkbox:checked {
+    background: #009900;
+}
+
+
+/* 设置复选框样式 */
+
+.circle-checkbox {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    border: solid 1px #dddddd;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    cursor: default;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+/* 设置伪类，即显现的对勾样式 */
+
+.circle-checkbox:checked::after {
+    content: "";
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    background: transparent;
+    border: #fff solid 2px;
+    border-top: none;
+    border-right: none;
+    height: 6px;
+    width: 10px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+/* button */
+
+.find {
+    width: 70px;
+    /* background-color: white; */
+    /* 鼠标箭头变成手指 */
+    cursor: pointer;
+}
+
+.delete {
+    width: 70px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.detail {
+    width: 100px;
+    cursor: pointer;
+    background-color: #999999;
+    color: #ffffff;
+    border: none;
+}
+
+.detail:hover {
+    background-color: #616161;
+}
+
+
+/* 详情弹框 */
+
+.detailPage {
+    width: 250px;
+    height: 250px;
+    margin-left: 20%;
+    margin-top: 10%;
+    line-height: 2em;
+    border: 2px solid #616161;
+    position: absolute;
+    text-align: left;
+    padding: 40px;
+    border-radius: 5%;
+    background-color: white;
+    display: none;
+}
+
+.detailPage img {
+    vertical-align: middle;
+}
+
+.detailPage input {
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+    border: 2px solid white;
+    /* color: #949494; */
+    background-color: #d7d7d7;
+    padding: 2px;
+    border-radius: 40%;
+}
+
+.detailPage input:hover {
+    background-color: #999999;
+    cursor: pointer;
+}
+
+
+/* 页码按钮 */
+
+.work-text .page {
+    float: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+
+
+/* 
+.work-text .page span {
+    border: 2px solid #d7d7d7;
+    border-radius: 40%;
+} */
+
+.work-text .page span:hover {
+    cursor: pointer;
+    /* background-color: #0000e5; */
+}
+
+.work-text .page .page-current {
+    color: #000097;
+    font-weight: 1000;
+}
